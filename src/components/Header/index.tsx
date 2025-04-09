@@ -1,15 +1,15 @@
 import NavBar from '../NavBar'
-import { Container, HeaderBox, Logo } from './styles'
+import { HeaderContainer, HeaderBox, Logo } from './styles'
 
 const Header = () => {
   return (
     <HeaderBox>
-      <Container>
+      <HeaderContainer>
         <Logo>
           <a href="/">YS Dev</a>
         </Logo>
         <NavBar />
-      </Container>
+      </HeaderContainer>
     </HeaderBox>
   )
 }

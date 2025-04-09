@@ -1,7 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
-import px2vw from '../utils/px2vs'
+import styled, { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +8,8 @@ export const GlobalStyle = createGlobalStyle`
   font-family: Saira, 'sans-serif';
   list-style: none;
   text-decoration: none;
+  color: #fff;
+  transition: all .3s ease-in-out;
 }
 
 html {
@@ -37,16 +38,17 @@ body { //Gradient background
   background-blend-mode: normal, normal, normal, normal, normal, normal, normal;
 
 }
+`
+export default GlobalStyle
 
-:root {
-  font-size: ${px2vw(24)};
+export const Container = styled.div`
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  width: 90%; /* Garante que o container tenha um bom respiro nas laterais */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 0 1.5rem; /* Recuo interno para evitar que o conteúdo encoste nas bordas */
 
-  @media (min-width: 768px) {
-    font-size: ${px2vw(18)};
+  @media (max-width: 768px) {
+    width: 95%; /* Para telas menores, aumenta a largura para melhor aproveitamento */
+    padding: 0 1rem;
   }
-
-  @media (min-width: 1024px) {
-    font-size: ${px2vw(16)};
-  }
-}
 `

@@ -1,30 +1,20 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const HeroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
-  color: #fff;
   height: 85vh;
-  width: 90%; /* Garante que o container tenha um bom respiro nas laterais */
-  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
-  padding: 1.6rem 1.5rem; /* Recuo interno para evitar que o conteúdo encoste nas bordas */
-
-  @media (max-width: 768px) {
-    width: 95%; /* Para telas menores, aumenta a largura para melhor aproveitamento */
-    padding: 0 1rem;
-  }
 `
 
 export const Name = styled.h1`
-  font-size: 3.7rem;
+  font-size: 6rem;
   font-weight: 600;
-  line-height: 3.5rem;
-  color: #fff;
+  line-height: 5rem;
 `
 export const Subtitle = styled.h2`
-  font-size: 1.8rem;
+  font-size: 3.2rem;
   font-weight: 400;
   margin-bottom: 0.4rem;
   color: #ed145b;
@@ -40,8 +30,8 @@ export const SocialLinksItem = styled.li`
   justify-content: center;
   align-items: center;
   margin-right: 8px;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 0.4rem;
   background-color: #141414;
 
@@ -52,8 +42,8 @@ export const SocialLinksItem = styled.li`
   }
 
   svg {
-    width: 2rem;
-    transition: fill 0.2s ease-in-out;
+    width: 3rem;
+    transition: fill;
     &:hover {
       fill: #ed145b;
     }
@@ -68,12 +58,11 @@ export const BackgroundPhoto = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 130%;
+  width: 150%;
 `
 export const MyPhoto = styled.img`
   position: relative;
-  width: 24rem;
-  height: 24rem;
+  width: 35rem;
   background-size: contain;
   border-radius: 50%;
 `

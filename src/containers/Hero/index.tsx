@@ -1,5 +1,5 @@
 import {
-  Container,
+  HeroContainer,
   Name,
   SocialLinks,
   SocialLinksItem,
@@ -13,7 +13,7 @@ import { AnimatedBackground } from '../../components/AnimatedBackground/Animated
 
 const Hero = () => {
   return (
-    <Container>
+    <HeroContainer>
       <div>
         <Name>Yuri Stanzani</Name>
         <Subtitle>Desenvolvedor Web</Subtitle>
@@ -73,7 +73,7 @@ const Hero = () => {
         </BackgroundPhoto>
         <MyPhoto src={myPhoto} />
       </PhotoCard>
-    </Container>
+    </HeroContainer>
   )
 }
 
