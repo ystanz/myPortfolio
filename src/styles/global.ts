@@ -38,6 +38,20 @@ body { //Gradient background
   background-blend-mode: normal, normal, normal, normal, normal, normal, normal;
 
 }
+
+.title {
+  text-align: center;
+  font-size: 3.2rem;
+  padding: 4.8rem 0;
+}
+
+.centralizer {
+    max-width: 102.4rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.6rem 0;
+  }
+
 `
 export default GlobalStyle
 

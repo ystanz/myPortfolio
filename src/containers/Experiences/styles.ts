@@ -3,13 +3,7 @@ import styled from 'styled-components'
 export const ExperiencesContainer = styled.div`
   padding-bottom: 8rem;
 `
-export const SectionTitle = styled.div`
-  padding: 4.8rem 0;
-`
-export const Title = styled.h2`
-  text-align: center;
-  font-size: 3.2rem;
-`
+
 export const ExperiencesBox = styled.div`
   display: flex;
   flex-direction: column;

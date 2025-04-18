@@ -6,17 +6,13 @@ import {
   ExperiencesInfo,
   ExperiencesLink,
   ExperiencesText,
-  ExperiencesTitle,
-  SectionTitle,
-  Title
+  ExperiencesTitle
 } from './styles'
 
 const Experiences = () => {
   return (
     <ExperiencesContainer>
-      <SectionTitle>
-        <Title>Experiências</Title>
-      </SectionTitle>
+      <h2 className="title">Experiências</h2>
       <ExperiencesBox>
         <ExperiencesCard>
           <ExperiencesTitle>Freelancer</ExperiencesTitle>
