@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 import { CarouselContainer } from './styles'
+import { Navigation, Pagination } from 'swiper/modules'
 
 interface Project {
   title: string
@@ -17,22 +17,33 @@ const Carousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   return (
     <CarouselContainer>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
+        modules={[Navigation, Pagination]}
+        effect="coverflow"
+        grabCursor
+        centeredSlides
+        initialSlide={2}
+        speed={600}
+        preventClicks
+        slidesPerView="auto"
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 80,
+          depth: 350,
+          modifier: 1,
+          slideShadows: true
+        }}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index} className="project-slide">
-            <a href={project.url} target="_blank" rel="noopener noreferrer">
-              <div className="project-card">
+            <div className="project-card">
+              <a href={project.url} target="_blank" rel="noreferrer">
                 <img src={project.image} alt={project.title} />
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-              </div>
-            </a>
+              </a>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

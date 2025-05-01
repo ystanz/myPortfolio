@@ -1,3 +1,4 @@
+import { ProjectContainer } from './styles'
 import Carousel from '../../components/Carousel'
 
 const projects = [
@@ -5,7 +6,7 @@ const projects = [
     title: 'Portfolio',
     image: 'https://placecats.com/300/160',
     description: 'Site pessoal feito com React e Styled-Components.',
-    url: 'https://seusite.dev'
+    url: '#'
   },
   {
     title: 'Dashboard Admin',
@@ -25,9 +26,9 @@ const Projects = () => {
   return (
     <section className="centralizer">
       <h2 className="title">Projetos</h2>
-      <>
+      <ProjectContainer>
         <Carousel projects={projects} />
-      </>
+      </ProjectContainer>
     </section>
   )
 }
